@@ -1,51 +1,102 @@
-body{
+body {
     font-family: "century gothic"
 }
-nav{ 
+
+nav {
     width: 100%;
     height: 60px;
-    background:#344051;
-    }
-.logo{
+    background: #344051;
+    position: fixed;
+    z-index: 1;
+}
+
+.logo {
     color: #fff;
     font-size: 32px;
     line-height: 60px;
     padding-left: 390px;
     float: left;
+    -webkit-animation: appearance 3s ease;
+    -o-animation: appearance 3s ease;
+    animation: appearance 3s ease;
 }
-.menu{
+
+.menu {
     float: left;
     padding-left: 390px;
 }
-.menu li{
-    float:left;
+
+.menu li {
+    float: left;
     line-height: 60px;
     color: #fff;
     margin-right: 40px;
     font-size: 16px;
-    text-transform: uppercase;      
+    text-transform: uppercase;
+    -webkit-animation: dropping 0.5s ease forwards;
+    -o-animation: dropping 0.5s ease forwards;
+    animation: dropping 0.5s ease forwards;
+    opacity: 0;
 }
-.main{width: 100%;
-    height: calc(100% - 60px);
-    background:url(../img/boy.png) no-repeat 90% 100%/auto 85% , url(../img/bachground.jpg) center/cover no-repeat;
+
+.menu li:nth-child(2) {
+    animation-delay: 0.2s;
 }
-.title_container{
-    float:left;
+
+.menu li:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.menu li:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.menu li:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.menu li:nth-child(6) {
+    animation-delay: 1s;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    background: url(../img/boy.png) no-repeat 90% 100%/auto 85%, url(../img/bachground.jpg) center/cover no-repeat;
+}
+
+.title_container {
+    float: left;
     margin: 432px 0px 0px 404px;
     color: #2c384a;
     text-align: center;
+    opacity: 0;
+    -webkit-animation: titleround 1s ease forwards;
+    -o-animation: titleround 1s ease forwards;
+    animation: titleround 1s ease forwards;
+    -webkit-animation-delay: 1.5s;
+    -o-animation-delay: 1.5s;
+    animation-delay: 1.5s;
 }
-.title_container h1{
+
+.title_container h1 {
     font-size: 64px;
     font-weight: 600;
 }
-.title_container h4{
+
+.title_container h4 {
     font-size: 32px;
     color: #79818d;
     text-align: center;
-    margin-top: 40px    
+    margin-top: 40px
 }
-.title_container input{
+
+.title_container input {
     height: 40px;
     text-align: center;
     border: 2px solid #79818d;
@@ -55,14 +106,27 @@ nav{
     font-size: 16px;
     padding: 0px 14px;
     margin: 58px 28px 0px 14px;
+    transform: scale(1);
+    transition: all 0.3s;
 }
-.about{
+
+.title_container input:hover {
+    background: #263244;
+    color: white;
+}
+
+.title_container input:active {
+    transform: scale(0.9);
+}
+
+.about {
     width: 100%;
     height: 720px;
     background: #fff;
     box-shadow: 0px 0px 30px;
 }
-.h2{
+
+.h2 {
     font-size: 24px;
     font-weight: 600;
     text-transform: uppercase;
@@ -70,23 +134,27 @@ nav{
     padding-top: 108px;
     color: #263244;
 }
-.img{
+
+.img {
     display: block;
-    margin:30px auto 40px auto;    
+    margin: 30px auto 40px auto;
 }
-.img1{
+
+.img1 {
     display: block;
-    margin:0px auto 20px auto;
+    margin: 0px auto 20px auto;
 }
-.about p{
+
+.about p {
     display: block;
     font-size: 16px;
     font-weight: 400;
     margin: 0px auto 42px auto;
-    width: 730px;    
+    width: 730px;
     color: #79818d;
 }
-.about input{
+
+.about input {
     display: block;
     width: 160px;
     background: url(../img/about_icon.png) no-repeat 3% 50%/auto;
@@ -96,18 +164,29 @@ nav{
     border-radius: 5px;
     height: 34px;
     text-align: center;
-    margin: 0px auto;    
+    margin: 0px auto;
+    transform: scale(1);
+    transition: all 0.3s;
 }
-.skills{
+.about input:hover{
+    background:url(../img/about_icon_white.png) no-repeat 3% 50%/auto,#79818d;
+    color: white;
+}
+.about input:active{
+    transform: scale(0.9);
+}
+.skills {
     width: 100%;
     height: 523px;
-    background: url(../img/skills.jpg) center/auto no-repeat;    
+    background: url(../img/skills.jpg) center/auto no-repeat;
 }
-.box{
+
+.box {
     width: 1162px;
     height: 240px;
-    margin:0px auto;
+    margin: 0px auto;
 }
+
 .skill {
     width: 210px;
     height: 240px;
@@ -115,43 +194,50 @@ nav{
     padding: 0px;
     float: left;
 }
-.skill img{
+
+.skill img {
     display: block;
     margin: 20px auto;
     height: 37px;
 }
-.skill h4{
+
+.skill h4 {
     text-align: center;
     font-size: 16px;
     color: #e38913;
     font-weight: bold;
     padding: 40px 0px 0px 0px;
-    
+
 }
-.skill p{
+
+.skill p {
     font-size: 14px;
-    color:#263244;
+    color: #263244;
     text-align: center;
     padding: 20px 0px 0px 20px;
-    
+
 }
-.cases{
+
+.cases {
     width: 100%;
     height: 1140px;
     background: #fff;
 }
-.cases p{
+
+.cases p {
     display: block;
     font-size: 16px;
     text-align: center;
     color: #263244;
-    margin:34px auto;
+    margin: 34px auto;
 }
-.pic{
+
+.pic {
     display: block;
     margin: 40px auto;
 }
-.client{
+
+.client {
     width: 210px;
     height: 178px;
     margin: 0px 70px 0px 368px;
@@ -160,12 +246,14 @@ nav{
     line-height: 28px;
     float: left;
 }
-.client h3{
+
+.client h3 {
     text-transform: uppercase;
     font-weight: 600;
     font-size: 20px;
 }
-.client input{
+
+.client input {
     color: #fff;
     text-transform: uppercase;
     font-size: 16px;
@@ -175,42 +263,58 @@ nav{
     width: 201px;
     margin: 18px auto;
     background: url(../img/cases_input.png) no-repeat center/100%;
+    transform: scale(1);
+    transition: all 0.3s;
 }
-.about_case{
+.client input:hover{
+    background: url(../img/cases_input_white.png) no-repeat center/100%;
+    color: #63b5ae;
+    border-radius: 3px solid #63b5ae;
+}
+.client input:active{
+    transform: scale(0.9);
+}
+.about_case {
     width: 850px;
     height: 90px;
     float: left;
     color: #263244;
     line-height: 20px;
 }
-.about_case h3{
+
+.about_case h3 {
     font-size: 16px;
     font-weight: 600;
 }
-.price{
+
+.price {
     width: 100%;
     height: 860px;
 }
-.price h2{
+
+.price h2 {
     color: #263244;
     font-size: 32px;
     font-weight: 600;
     text-align: center;
     padding-top: 110px;
 }
-.price form{
+
+.price form {
     width: 890px;
     height: 430px;
     margin: 60px auto;
 }
-.price p{
+
+.price p {
     color: #263244;
     text-align: left;
     text-transform: uppercase;
     font-size: 24px;
     font-weight: 600;
 }
-.price select{
+
+.price select {
     color: #737373;
     height: 58px;
     width: 100%;
@@ -219,28 +323,33 @@ nav{
     margin: 24px auto 50px auto;
     border-radius: 5px;
 }
-.price img{
+
+.price img {
     display: block;
     margin: 0px auto;
 }
-.calc{
+
+.calc {
     width: 890px;
     height: 32px;
     color: #263244;
     margin: 0px auto;
 }
-.calc p{
+
+.calc p {
     text-transform: capitalize;
     font-size: 16px;
     font-size: 600;
     text-align: left;
     padding-top: 15px;
 }
-.stat{
+
+.stat {
     width: 100%;
     height: 499px;
     background: url(../img/stat_bg.jpg) no-repeat center/100%;
 }
+
 .position {
     width: 210px;
     height: 240px;
@@ -248,62 +357,75 @@ nav{
     padding: 0px;
     float: left;
 }
-.position img{
+
+.position img {
     display: block;
     margin: 20px auto;
     height: 47px;
 }
-.position h4{
+
+.position h4 {
     text-align: center;
     font-size: 32px;
     color: #263244;
     font-weight: bold;
     padding: 10px 0px 0px 0px;
-    
+
 }
-.position p{
+
+.position p {
     font-size: 14px;
     text-transform: uppercase;
-    color:#263244;
+    color: #263244;
     text-align: center;
-    padding: 20px 0px 0px 20px;   
+    padding: 20px 0px 0px 20px;
 }
-.rewievs{
+
+.rewievs {
     width: 100%;
     height: 590px;
     background: #fff;
 }
-.photo{
+
+.photo {
     display: block;
     margin: 0px auto;
 }
-.rewievs p{
+
+.rewievs p {
     width: 690px;
     height: 40px;
     text-align: center;
     margin: 24px auto 0px auto;
 }
-.rewievs span{
+
+.rewievs span {
     font-weight: 600;
 }
-.bullets{
+
+.bullets {
     width: 72px;
     height: 10px;
     margin: 50px auto;
 }
-.bullets img{
+
+.bullets img {
     display: block;
     float: left;
     padding-right: 7px;
     padding-left: 7px;
 }
-.mycontacts{
+.bullets img:hover{
+    
+}
+.mycontacts {
     height: 808px;
     width: 100%;
     background: url(../img/footer_bg.jpg) no-repeat center/100%;
     color: #fff;
 }
-.h2_footer{
+
+.h2_footer {
     font-size: 24px;
     font-weight: 600;
     text-transform: uppercase;
@@ -311,58 +433,68 @@ nav{
     padding-top: 108px;
     color: #fff;
 }
-.mycontacts p{
+
+.mycontacts p {
     text-align: center;
 }
-.contacts{
+
+.contacts {
     width: 797px;
     height: 90px;
-    margin:45px auto 1px auto;
+    margin: 45px auto 1px auto;
 }
+
 .contact {
     width: 155px;
     height: 90px;
     margin: auto 55px;
     float: left;
 }
-.contact img{
+
+.contact img {
     display: block;
     margin: 0px auto;
     height: 24px;
 }
-.contact p{
+
+.contact p {
     font-size: 12px;
     text-align: center;
-    padding-top:13px;
+    padding-top: 13px;
 }
-.message h2{
+
+.message h2 {
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
     text-align: center;
-    padding-bottom: 45px;    
+    padding-bottom: 45px;
 }
-.message form{
+
+.message form {
     width: 770px;
     height: 170px;
     margin: 0px auto;
 }
-.message input{
+
+.message input {
     width: 350px;
     height: 34px;
     margin: auto 16px;
     padding-left: 14px;
-    background: rgba(210,214,220,0.9);
+    background: rgba(210, 214, 220, 0.9);
 }
-.message textarea{
+
+.message textarea {
     display: block;
     width: 735px;
     height: 94px;
-    background: rgba(210,214,220,0.9);
     padding: 14px;
+    background: rgba(210, 214, 220, 0.9);
     margin: 14px auto;
 }
-[submit=""]{
+
+[submit=""] {
     display: block;
     width: 125px;
     height: 47px;
@@ -374,20 +506,155 @@ nav{
     color: #fff;
     font-size: 16px;
     font-weight: 600;
+    transform: scale(1);
+    transition: all 0.3s;
 }
-.location{
+[submit=""]:hover{
+background: rgba(210, 214, 220, 0.9);
+    color: #263244;
+    border: none;
+}
+[submit=""]:active{
+ transform: scale(0.9);
+}
+.location {
     width: 100%;
     height: 356px;
     background: url(../img/footer_map.png) no-repeat center/100%;
 }
-footer{
+
+footer {
     width: 100%;
     height: 94px;
     background: url(../img/footer_layout.jpg) no-repeat center/100%;
     font-size: 14px;
-    color: #fff;  
+    color: #fff;
 }
+
 footer p {
     text-align: center;
     padding: 30px;
+}
+
+.menu li a {
+    transition: all 0.3s;
+    color: white;
+    transform: scale(1);
+    display: inline-block;
+}
+
+.menu li a:visited {
+    color: white;
+}
+
+.menu li a:hover {
+    color: #e38913;
+    transform: scale(1.1);
+}
+
+.menu li a:active {
+    transform: scale(0.9);
+}
+
+@keyframes appearance {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes dropping {
+    from {
+        opacity: 0;
+        margin-top: -80px;
+    }
+
+    to {
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+@keyframes titleround {
+    from {
+        opacity: 0;
+        margin-left: -500px;
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 404px;
+    }
+}
+.preloader {
+  /*фиксированное позиционирование*/
+  position: fixed;
+  /* координаты положения */
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /* фоновый цвет элемента */
+  background: #2c384a;
+  /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+  z-index: 1001;
+}
+
+.preloader__row {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  animation: preloader-rotate 2s infinite linear;
+}
+
+.preloader__item {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  background-color: #fff;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  animation: preloader-bounce 2s infinite ease-in-out;
+}
+
+.preloader__item:last-child {
+  top: auto;
+  bottom: 0;
+  animation-delay: -1s;
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes preloader-bounce {
+
+  0%,
+  100% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
 }
