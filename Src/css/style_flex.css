@@ -7,7 +7,7 @@ nav {
     height: 60px;
     background: #344051;
     position: fixed;
-    z-index: 1;
+    z-index: 100;
 }
 
 .logo {
@@ -214,13 +214,11 @@ position: relative;
     margin: 0px auto 20px auto;
 }
 
-.about p {
-    display: block;
+.about span {
     font-size: 16px;
     font-weight: 400;
-    margin: 0px auto 42px auto;
-    width: 730px;
     color: #79818d;
+    text-align: left;
 }
 
 .about input {
@@ -234,6 +232,7 @@ position: relative;
     height: 34px;
     text-align: center;
     margin: 0px auto;
+    margin-top: 30px;
     transform: scale(1);
     transition: all 0.3s;
 }
@@ -247,7 +246,7 @@ position: relative;
 .skills {
     width: 100%;
     height: 523px;
-    background: url(../img/skills.jpg) center/auto no-repeat;
+    background: url(../img/skills.jpg) center/100% no-repeat;
 }
 
 .box {
@@ -289,16 +288,14 @@ position: relative;
     width: 100%;
     height: 1140px;
     background: #fff;
-}
-
-.cases p {
-    display: block;
-    font-size: 12px;
     text-align: center;
-    color: #263244;
-    margin: 34px auto;
 }
 
+.cases span {
+    font-size: 12px;
+    color: #263244;
+    margin-top: 34px;
+}
 .pic {
     display: block;
     margin: 40px auto;
@@ -341,17 +338,29 @@ position: relative;
 .client input:active{
     transform: scale(0.9);
 }
+
 .about_case {
+    text-align: left;
     width: auto;
     color: #263244;
     line-height: 20px;
 }
-
-.about_case h3 {
+.client{
+    text-align: left;
+}
+.about_case p {
     font-size: 16px;
     font-weight: 600;
 }
-
+@media(max-width:576px){
+    .client, .about_case{
+        text-align: center;
+    }
+    .client input{
+        margin: 0px auto;
+        margin-top: 18px;
+    }
+}
 .price {
     width: 100%;
     height: 860px;
@@ -362,7 +371,8 @@ position: relative;
     font-size: 32px;
     font-weight: 600;
     text-align: center;
-    padding-top: 110px;
+    padding-top: 90px;
+    padding-bottom: 20px;
 }
 
 .price form {
@@ -401,7 +411,7 @@ position: relative;
     margin: 0px auto;
 }
 
-.calc p {
+.calc span {
     text-transform: capitalize;
     font-size: 16px;
     font-size: 600;
@@ -456,7 +466,7 @@ position: relative;
     width: 690px;
     height: 40px;
     text-align: center;
-    margin: 24px auto 0px auto;
+    margin: 48px auto 0px auto;
 }
 
 .rewievs span {
@@ -518,7 +528,9 @@ position: relative;
     text-align: center;
     padding-top: 13px;
 }
-
+.message{
+    margin-top: 20px;
+}
 .message h2 {
     font-size: 16px;
     font-weight: 600;
@@ -536,18 +548,14 @@ position: relative;
 }
 
 .message input {
-    width: 350px;
+
     height: 34px;
-    margin: auto 16px;
-    padding-left: 14px;
     background: rgba(210, 214, 220, 0.9);
 }
 
 .message textarea {
     display: block;
-    width: 735px;
     height: 94px;
-    padding: 14px;
     background: rgba(210, 214, 220, 0.9);
     margin: 14px auto;
 }
@@ -667,4 +675,10 @@ footer p {
 
 .loaded .preloader {
   display: none;
+}
+@media(max-width:991px){
+     .skills,.stat,.about{
+         height: auto;
+        background-size: cover;
+    }
 }
