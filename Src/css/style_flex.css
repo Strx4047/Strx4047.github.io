@@ -610,8 +610,13 @@ footer p {
 
 
 
-
-
+.element-animation{
+    opacity: 0;
+}
+.element-animatin.show-element{
+    opacity: 1;
+    transition: opacity 1s;
+}
 .preloader {
   /*фиксированное позиционирование*/
   position: fixed;
