@@ -64,6 +64,7 @@ nav {
 .menu li:nth-child(6) {
     animation-delay: 1s;
 }
+
 .menu li a {
     transition: all 0.3s;
     color: white;
@@ -85,7 +86,7 @@ nav {
 .menu li a:active {
     transform: scale(0.9);
 }
-.menu li a.active {
+menu a.active {
     transform: scale(1.1);
     color: #e38913;        
 }
@@ -120,12 +121,7 @@ white_button:visited{
     width: 100%;
     margin-top: 130px;
     opacity: 0;
-    -webkit-animation: titleround 1s ease forwards;
-    -o-animation: titleround 1s ease forwards;
-    animation: titleround 1s ease forwards;
-    -webkit-animation-delay: 1.5s;
-    -o-animation-delay: 1.5s;
-    animation-delay: 1.5s;
+   
     
 }
 
@@ -607,15 +603,13 @@ footer p {
     padding: 30px;
 }
 
-
-
-
-.element-animation{
-    opacity: 0;
-}
-.element-animatin.show-element{
-    opacity: 1;
-    transition: opacity 1s;
+.title_container.show-element{
+     -webkit-animation: titleround 1s ease forwards;
+    -o-animation: titleround 1s ease forwards;
+    animation: titleround 1s ease forwards;
+    -webkit-animation-delay: 1.5s;
+    -o-animation-delay: 1.5s;
+    animation-delay: 1.5s;
 }
 .preloader {
   /*фиксированное позиционирование*/
